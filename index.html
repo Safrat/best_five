@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEST OF BEST FIVE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: rgb(39, 39, 39);
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 70px;
+        }
+
+        .card {
+            height: 340px;
+            width: 270px;
+            background-color: black;
+            margin: 15px;
+
+        }
+
+        .card-1 {
+            height: 500px;
+            width: 270px;
+            background-color: black;
+            margin: 15px;
+        }
+
+        .player-image {
+            background-color: aqua;
+            height: 170px;
+            margin-bottom: 15px;
+            background-size: cover;
+        }
+
+        .player-1 {
+            background-image: url('images/bale.jpg');
+        }
+
+        .player-2 {
+            background-image: url(images/hazard.jpg);
+        }
+
+        .player-3 {
+            background-image: url(images/Benzema.jpg);
+        }
+
+        .player-4 {
+            background-image: url(images/messi.jpg);
+        }
+
+        .player-5 {
+            background-image: url(images/pogba.jpg);
+        }
+
+        .player-6 {
+            background-image: url(images/ronaldo.jpg);
+        }
+
+        hr {
+            margin-top: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <section class="grid grid-cols-4 h-96 w-full bg-black ">
+            <div class="bg-no-repeat bg-left-bottom" style="background-image:url(images/lion2.jpg) ;">
+
+
+            </div>
+            <div class="col-span-2 text-center pt-20">
+                <h1 class="text-orange-600 text-6xl font-bold">Select Your Best <span class=" underline decoration-white 
+                    ">Five</span> </h1>
+                <p class="text-white py-8">
+                    Football is the best game in our life. So we are gonna buy some smoky player for us. We will buy 5
+                    player for our club. Wish you all are support us with our decision.
+                </p>
+            </div>
+            <div class="bg-no-repeat bg-right-bottom" style="background-image: url(images/messi-removebg-preview.png);">
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="container">
+
+            <div class="card">
+                <div class="player-image player-1"></div>
+                <h2 class="text-white text-center text-2xl font-bold pb-3 ">Garate Bale</h2>
+                <p class="text-slate-300 text-center pb-3">36 Goals . 120 Assist</p>
+                <button class="bg-blue-600 px-8 py-2 text-white font-bold ml-20"
+                    onclick=" selectItemFromSelect(this); this.disabled=true">SELECT </button>
+            </div>
+            <div class="card">
+                <div class="player-image player-2"></div>
+                <h2 class="text-white text-center text-2xl font-bold pb-3 ">Eden Hazard</h2>
+                <p class="text-slate-300 text-center pb-3">36 Goals . 120 Assist</p>
+                <button class="bg-blue-600 px-8 py-2 text-white font-bold ml-20"
+                    onclick=" selectItemFromSelect(this); this.disabled=true">SELECT </button>
+            </div>
+            <div class="card">
+                <div class="player-image player-3"></div>
+                <h2 class="text-white text-center text-2xl font-bold pb-3 ">Karim Benzema</h2>
+                <p class="text-slate-300 text-center pb-3">36 Goals . 120 Assist</p>
+                <button class="bg-blue-600 px-8 py-2 text-white font-bold ml-20"
+                    onclick=" selectItemFromSelect(this); this.disabled=true">SELECT </button>
+            </div>
+
+            <div class="card">
+                <div>
+                    <h1
+                        class="text-center text-white font-bold text-3xl pt-3 underline decoration-orange-600 decoration-4">
+                        Selected - V</h1>
+                </div>
+                <div class="m-4 p-3">
+                    <ul class="text-white pb-3" id="order-list">
+
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+        <section class="container">
+            <div class="card">
+                <div class="player-image player-4"></div>
+                <h2 class="text-white text-center text-2xl font-bold pb-3 ">Leonel Messi</h2>
+                <p class="text-slate-300 text-center pb-3">36 Goals . 120 Assist</p>
+                <button class="bg-blue-600 px-8 py-2 text-white font-bold ml-20"
+                    onclick=" selectItemFromSelect(this); this.disabled=true">SELECT </button>
+            </div>
+            <div class="card">
+                <div class="player-image player-5"></div>
+                <h2 class="text-white text-center text-2xl font-bold pb-3 ">Paul Pogba</h2>
+                <p class="text-slate-300 text-center pb-3">36 Goals . 120 Assist</p>
+                <button class="bg-blue-600 px-8 py-2 text-white font-bold ml-20"
+                    onclick=" selectItemFromSelect(this); this.disabled=true">SELECT </button>
+            </div>
+            <div class="card">
+                <div class="player-image player-6"></div>
+                <h2 class="text-white text-center text-2xl font-bold pb-3 ">Cristiano Ronaldo</h2>
+                <p class="text-slate-300 text-center pb-3">36 Goals . 120 Assist</p>
+                <button class="bg-blue-600 px-8 py-2 text-white font-bold ml-20"
+                    onclick=" selectItemFromSelect(this); this.disabled=true">SELECT </button>
+            </div>
+            <div class="card-1">
+                <div>
+                    <h1
+                        class="text-center text-white font-bold text-3xl pt-3 pb-4 underline decoration-orange-600 decoration-4">
+                        Budget</h1>
+                </div>
+                <div class="flex pb-5">
+                    <h2 class="text-white pr-4 ">Per Player</h2>
+                    <input type="text" class="border-slate-200 w-18" id="per-player">
+                </div>
+                <button class="bg-blue-600 px-8 py-2 text-white font-bold ml-20" id="calculate-btn">Calculate </button>
+                <div class="pb-5 flex pt-6">
+                    <h2 class="text-white pr-4 pl-2"> Player Expences</h2>
+                    <p class="text-white">$<span id="player-expences"></span></p>
+                </div>
+                <div class="flex pb-5">
+                    <h2 class="text-white pr-4 pl-2">Manager</h2>
+                    <input type="text" class="border-slate-200 w-18" id="manager-cost">
+                </div>
+                <div class="flex pb-5">
+                    <h2 class="text-white pr-9 pl-2">Coach</h2>
+                    <input type="text" class="border-slate-200 w-18 " id="coach-cost">
+                </div>
+                <button class="bg-blue-600 px-8 py-2 text-white font-bold ml-14" id="calculate-id">Calculate Total
+                </button>
+                <div class="flex pt-8">
+                    <h2 class="text-white pr-12 font-bold pl-3">Total</h2>
+                    <p class="text-orange-600">$<span id="total-cost"></span></p>
+                </div>
+            </div>
+
+        </section>
+        <hr class="my-20">
+        <footer>
+            <p class="text-slate-300 text-center pb-20">Copyright @ 2022 All Rights Reserved.</p>
+        </footer>
+
+    </main>
+    <script src="js/select.js"></script>
+    <script src="js/calculate.js"></script>
+</body>
+
+</html>
